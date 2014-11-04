@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width; target-densityDpi=160; initial-scale=1; maximum-scale=1" />
+  <meta name="viewport" content="minimal-ui" />
+  <meta name="description" content="John Novak Photography" />
+
+  <title>John Novak Photography</title>
+
+  <link rel="stylesheet" type="text/css" href="/css/fotorama.css">
+  <link rel="stylesheet" type="text/css" href="/css/photo.css" />
+
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    if (!window.jQuery) {
+      document.write('<script src="/js/lib/jquery-1.11.1.min.js"><\/script>');
+    }
+  </script>
+  <script src="/js/lib/fotorama.js"></script>
+  <script src="/js/lib/imagesloaded.pkgd.min.js"></script>
+  <script src="/js/photo.js"></script>
+</head> 
+
+<body class="photo">
+  <script src="/js/lib/respond.min.js"></script>
+  <script>document.body.className += ' js';</script>
+
+  <div id="header">
+    <h1><a class="jn" href="http://www.johnnovak.net/">John Novak</a> <a class="photo" href="/">Photography</a></h1>
+
+    <div class="menu">
+      <ul class="categories">
+        <li><a href="/mannequins/">Mannequins</a></li>
+        <li><a href="/urban/">Urban</a></li>
+        <li><a href="/people/">People</a></li>
+        <li><a href="/bw/">B&W</a></li>
+      </ul>
+      <p class="about"><a href="/about/">About</a></p>
+    </div>
+  </div>
+
+  <div id="content">
+    <div id="fotorama" data-auto="false">
+      <a class="anchor" name="deep-v"></a>
+      <img src="deep-v.jpg" alt="Deep V &mdash; Singapore, 2012" style="max-width: 1440px">
+      <a href="#deep-v"><h2>Deep V &mdash; Singapore, 2012</h2></a>
+    
+      <a class="anchor" name="miss-goldfarb"></a>
+      <img src="miss-goldfarb.jpg" alt="Miss Goldfarb &mdash; Vienna, Austria, 2010" style="max-width: 989px">
+      <a href="#miss-goldfarb"><h2>Miss Goldfarb &mdash; Vienna, Austria, 2010</h2></a>
+    
+      <a class="anchor" name="from-head-to-toe"></a>
+      <img src="from-head-to-toe.jpg" alt="From Head to Toe &mdash; Amsterdam, Holland, 2008" style="max-width: 1440px">
+      <a href="#from-head-to-toe"><h2>From Head to Toe &mdash; Amsterdam, Holland, 2008</h2></a>
+    
+      <a class="anchor" name="hair"></a>
+      <img src="hair.jpg" alt="Hair &mdash; Austria, 2005" style="max-width: 960px">
+      <a href="#hair"><h2>Hair &mdash; Austria, 2005</h2></a>
+    
+      <a class="anchor" name="petra-porcelain-1"></a>
+      <img src="petra-porcelain-1.jpg" alt="Petra Porcelain #1 &mdash; Noosa Heads, Australia, 2011" style="max-width: 1440px">
+      <a href="#petra-porcelain-1"><h2>Petra Porcelain #1 &mdash; Noosa Heads, Australia, 2011</h2></a>
+    
+      <a class="anchor" name="petra-porcelain-2"></a>
+      <img src="petra-porcelain-2.jpg" alt="Petra Porcelain #2 &mdash; Noosa Heads, Australia, 2011" style="max-width: 960px">
+      <a href="#petra-porcelain-2"><h2>Petra Porcelain #2 &mdash; Noosa Heads, Australia, 2011</h2></a>
+    
+      <a class="anchor" name="petra-porcelain-3"></a>
+      <img src="petra-porcelain-3.jpg" alt="Petra Porcelain #3 &mdash; Noosa Heads, Australia, 2011" style="max-width: 960px">
+      <a href="#petra-porcelain-3"><h2>Petra Porcelain #3 &mdash; Noosa Heads, Australia, 2011</h2></a>
+    
+      <a class="anchor" name="petra-porcelain-4"></a>
+      <img src="petra-porcelain-4.jpg" alt="Petra Porcelain #4 &mdash; Noosa Heads, Australia, 2011" style="max-width: 960px">
+      <a href="#petra-porcelain-4"><h2>Petra Porcelain #4 &mdash; Noosa Heads, Australia, 2011</h2></a>
+    
+      <a class="anchor" name="laura-laser"></a>
+      <img src="laura-laser.jpg" alt="Laura Laser &mdash; Sydney, Australia, 2011" style="max-width: 1440px">
+      <a href="#laura-laser"><h2>Laura Laser &mdash; Sydney, Australia, 2011</h2></a>
+    </div>
+
+    <div id="nav"></div>
+</div>
+
+  <script>
+    $(function() {
+      (site.currentPage = site.photo).init();
+    });
+  </script>
+</body>
+</html>

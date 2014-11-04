@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width; target-densityDpi=160; initial-scale=1; maximum-scale=1" />
+  <meta name="viewport" content="minimal-ui" />
+  <meta name="description" content="John Novak Photography" />
+
+  <title>John Novak Photography</title>
+
+  <link rel="stylesheet" type="text/css" href="/css/fotorama.css">
+  <link rel="stylesheet" type="text/css" href="/css/photo.css" />
+
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    if (!window.jQuery) {
+      document.write('<script src="/js/lib/jquery-1.11.1.min.js"><\/script>');
+    }
+  </script>
+  <script src="/js/lib/fotorama.js"></script>
+  <script src="/js/lib/imagesloaded.pkgd.min.js"></script>
+  <script src="/js/photo.js"></script>
+</head> 
+
+<body class="photo">
+  <script src="/js/lib/respond.min.js"></script>
+  <script>document.body.className += ' js';</script>
+
+  <div id="header">
+    <h1><a class="jn" href="http://www.johnnovak.net/">John Novak</a> <a class="photo" href="/">Photography</a></h1>
+
+    <div class="menu">
+      <ul class="categories">
+        <li><a href="/mannequins/">Mannequins</a></li>
+        <li><a href="/urban/">Urban</a></li>
+        <li><a href="/people/">People</a></li>
+        <li><a href="/bw/">B&W</a></li>
+      </ul>
+      <p class="about"><a href="/about/">About</a></p>
+    </div>
+  </div>
+
+  <div id="content">
+    <div id="fotorama" data-auto="false">
+      <a class="anchor" name="blue-sun-miss"></a>
+      <img src="blue-sun-miss.jpg" alt="Blue Sun Miss &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
+      <a href="#blue-sun-miss"><h2>Blue Sun Miss &mdash; Budapest, Hungary, 2008</h2></a>
+    
+      <a class="anchor" name="escape-your-own-prison"></a>
+      <img src="escape-your-own-prison.jpg" alt="Escape Your Own Prison &mdash; Budapest, Hungary, 2007" style="max-width: 1440px">
+      <a href="#escape-your-own-prison"><h2>Escape Your Own Prison &mdash; Budapest, Hungary, 2007</h2></a>
+    
+      <a class="anchor" name="key-of-life"></a>
+      <img src="key-of-life.jpg" alt="Key of Life &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
+      <a href="#key-of-life"><h2>Key of Life &mdash; Budapest, Hungary, 2008</h2></a>
+    
+      <a class="anchor" name="nienor-niniel"></a>
+      <img src="nienor-niniel.jpg" alt="Niënor Níniel &mdash; Budapest, Hungary, 2007" style="max-width: 1440px">
+      <a href="#nienor-niniel"><h2>Niënor Níniel &mdash; Budapest, Hungary, 2007</h2></a>
+    
+      <a class="anchor" name="perpetual-gaze"></a>
+      <img src="perpetual-gaze.jpg" alt="Perpetual Gaze &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
+      <a href="#perpetual-gaze"><h2>Perpetual Gaze &mdash; Budapest, Hungary, 2008</h2></a>
+    
+      <a class="anchor" name="recoil"></a>
+      <img src="recoil.jpg" alt="Recoil &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
+      <a href="#recoil"><h2>Recoil &mdash; Budapest, Hungary, 2008</h2></a>
+    
+      <a class="anchor" name="selfreflect"></a>
+      <img src="selfreflect.jpg" alt="Selfreflect &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
+      <a href="#selfreflect"><h2>Selfreflect &mdash; Budapest, Hungary, 2008</h2></a>
+    
+      <a class="anchor" name="third-child-of-thalion"></a>
+      <img src="third-child-of-thalion.jpg" alt="Third Child of Thalion &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
+      <a href="#third-child-of-thalion"><h2>Third Child of Thalion &mdash; Budapest, Hungary, 2008</h2></a>
+    </div>
+
+    <div id="nav"></div>
+</div>
+
+  <script>
+    $(function() {
+      (site.currentPage = site.photo).init();
+    });
+  </script>
+</body>
+</html>

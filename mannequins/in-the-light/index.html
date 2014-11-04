@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width; target-densityDpi=160; initial-scale=1; maximum-scale=1" />
+  <meta name="viewport" content="minimal-ui" />
+  <meta name="description" content="John Novak Photography" />
+
+  <title>John Novak Photography</title>
+
+  <link rel="stylesheet" type="text/css" href="/css/fotorama.css">
+  <link rel="stylesheet" type="text/css" href="/css/photo.css" />
+
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    if (!window.jQuery) {
+      document.write('<script src="/js/lib/jquery-1.11.1.min.js"><\/script>');
+    }
+  </script>
+  <script src="/js/lib/fotorama.js"></script>
+  <script src="/js/lib/imagesloaded.pkgd.min.js"></script>
+  <script src="/js/photo.js"></script>
+</head> 
+
+<body class="photo">
+  <script src="/js/lib/respond.min.js"></script>
+  <script>document.body.className += ' js';</script>
+
+  <div id="header">
+    <h1><a class="jn" href="http://www.johnnovak.net/">John Novak</a> <a class="photo" href="/">Photography</a></h1>
+
+    <div class="menu">
+      <ul class="categories">
+        <li><a href="/mannequins/">Mannequins</a></li>
+        <li><a href="/urban/">Urban</a></li>
+        <li><a href="/people/">People</a></li>
+        <li><a href="/bw/">B&W</a></li>
+      </ul>
+      <p class="about"><a href="/about/">About</a></p>
+    </div>
+  </div>
+
+  <div id="content">
+    <div id="fotorama" data-auto="false">
+      <a class="anchor" name="anneke"></a>
+      <img src="anneke.jpg" alt="Anneke &mdash; Vienna, Austria, 2010" style="max-width: 1440px">
+      <a href="#anneke"><h2>Anneke &mdash; Vienna, Austria, 2010</h2></a>
+    
+      <a class="anchor" name="fatima-flame"></a>
+      <img src="fatima-flame.jpg" alt="Fatima Flame &mdash; Sydney, Australia, 2011" style="max-width: 1440px">
+      <a href="#fatima-flame"><h2>Fatima Flame &mdash; Sydney, Australia, 2011</h2></a>
+    
+      <a class="anchor" name="the-miraculous-miss-anderson"></a>
+      <img src="the-miraculous-miss-anderson.jpg" alt="The Miraculous Miss Anderson &mdash; Sydney, Australia, 2011" style="max-width: 1440px">
+      <a href="#the-miraculous-miss-anderson"><h2>The Miraculous Miss Anderson &mdash; Sydney, Australia, 2011</h2></a>
+    
+      <a class="anchor" name="bo-bride"></a>
+      <img src="bo-bride.jpg" alt="Bo Bride &mdash; Brisbane, Australia, 2011" style="max-width: 960px">
+      <a href="#bo-bride"><h2>Bo Bride &mdash; Brisbane, Australia, 2011</h2></a>
+    
+      <a class="anchor" name="caitrin-chalk"></a>
+      <img src="caitrin-chalk.jpg" alt="Caitrin Chalk &mdash; Sydney, Australia, 2011" style="max-width: 909px">
+      <a href="#caitrin-chalk"><h2>Caitrin Chalk &mdash; Sydney, Australia, 2011</h2></a>
+    
+      <a class="anchor" name="dreaday"></a>
+      <img src="dreaday.jpg" alt="Dreaday &mdash; Singapore, 2012" style="max-width: 1440px">
+      <a href="#dreaday"><h2>Dreaday &mdash; Singapore, 2012</h2></a>
+    
+      <a class="anchor" name="fanny-frost"></a>
+      <img src="fanny-frost.jpg" alt="Fanny Frost &mdash; Vienna, Austria, 2010" style="max-width: 1440px">
+      <a href="#fanny-frost"><h2>Fanny Frost &mdash; Vienna, Austria, 2010</h2></a>
+    
+      <a class="anchor" name="priscilla-pearl"></a>
+      <img src="priscilla-pearl.jpg" alt="Priscilla Pearl &mdash; Sydney, Australia, 2011" style="max-width: 960px">
+      <a href="#priscilla-pearl"><h2>Priscilla Pearl &mdash; Sydney, Australia, 2011</h2></a>
+    
+      <a class="anchor" name="medusa"></a>
+      <img src="medusa.jpg" alt="Medusa &mdash; London, UK, 2008" style="max-width: 1440px">
+      <a href="#medusa"><h2>Medusa &mdash; London, UK, 2008</h2></a>
+    
+      <a class="anchor" name="patty-plastic"></a>
+      <img src="patty-plastic.jpg" alt="Patty Plastic &mdash; Bern, Switzerland, 2007" style="max-width: 1440px">
+      <a href="#patty-plastic"><h2>Patty Plastic &mdash; Bern, Switzerland, 2007</h2></a>
+    
+      <a class="anchor" name="in-grey"></a>
+      <img src="in-grey.jpg" alt="In Grey &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
+      <a href="#in-grey"><h2>In Grey &mdash; Budapest, Hungary, 2008</h2></a>
+    
+      <a class="anchor" name="sleeping-beauty"></a>
+      <img src="sleeping-beauty.jpg" alt="Sleeping Beauty &mdash; London, UK, 2008" style="max-width: 1440px">
+      <a href="#sleeping-beauty"><h2>Sleeping Beauty &mdash; London, UK, 2008</h2></a>
+    
+      <a class="anchor" name="vanessa-vivid"></a>
+      <img src="vanessa-vivid.jpg" alt="Vanessa Vivid &mdash; Vienna, Austria, 2010" style="max-width: 960px">
+      <a href="#vanessa-vivid"><h2>Vanessa Vivid &mdash; Vienna, Austria, 2010</h2></a>
+    </div>
+
+    <div id="nav"></div>
+</div>
+
+  <script>
+    $(function() {
+      (site.currentPage = site.photo).init();
+    });
+  </script>
+</body>
+</html>
