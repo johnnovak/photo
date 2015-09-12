@@ -18,65 +18,63 @@
   <link rel="stylesheet" type="text/css" href="/css/fotorama.css">
   <link rel="stylesheet" type="text/css" href="/css/photo.css" />
 
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script>
     if (!window.jQuery) {
-      document.write('<script src="/js/lib/jquery-1.11.1.min.js"><\/script>');
+      document.write('<script src="/js/lib/jquery-1.11.3.min.js"><\/script>');
     }
   </script>
   <script src="/js/lib/fotorama.js"></script>
   <script src="/js/lib/imagesloaded.pkgd.min.js"></script>
   <script src="/js/photo.js"></script>
-</head> 
+</head>
 
-<body class="photo">
+<body class="photo nojs">
   <script src="/js/lib/respond.min.js"></script>
-  <script>document.body.className += ' js';</script>
+  <script>
+    var c = document.body.className;
+    c = c.replace(' nojs', '');
+    c += ' js';
+    document.body.className = c;
+  </script>
 
   <div id="header">
     <h1><a class="jn" href="http://www.johnnovak.net/">John Novak</a> <a class="photo" href="/">Photography</a></h1>
 
-    <div class="menu">
-      <ul class="categories">
-        <li><a href="/mannequins/">Mannequins</a></li>
-        <li><a href="/urban/">Urban</a></li>
-        <li><a href="/people/">People</a></li>
-        <li><a href="/bw/">B&W</a></li>
-      </ul>
-      <p class="about"><a href="/about/">About</a></p>
-    </div>
+    <ul class="menu">
+      <li class="category"><a href="/mannequins/">Mannequins</a></li>
+      <li class="category"><a href="/urban/">Urban</a></li>
+      <li class="category"><a href="/people/">People</a></li>
+      <li class="category"><a href="/events/">Events</a></li>
+      <li class="category"><a href="/bw/">Black & White</a></li>
+      <li class="about"><a href="/about/">About</a></li>
+    </ul>
   </div>
 
   <div id="content">
+    <noscript>
+      <div class="no-javascript">
+        Viewing the photo galleries requires JavaScript.
+      </div>
+    </noscript>
+
     <div id="fotorama" data-auto="false">
-      <a class="anchor" name="neuschwanstein-castle"></a>
-      <img src="neuschwanstein-castle.jpg" alt="Neuschwanstein Castle &mdash; Neuschwanstein, Germany, 2005" style="max-width: 1440px">
-      <a href="#neuschwanstein-castle"><h2>Neuschwanstein Castle &mdash; Neuschwanstein, Germany, 2005</h2></a>
+      <a id="neuschwanstein-castle" href="neuschwanstein-castle.jpg" alt="Neuschwanstein Castle &mdash; Neuschwanstein, Germany, 2005" data-caption="Neuschwanstein Castle &mdash; Neuschwanstein, Germany, 2005"></a>
     
-      <a class="anchor" name="view-from-neuschwanstein-castle"></a>
-      <img src="view-from-neuschwanstein-castle.jpg" alt="View from Neuschwanstein Castle &mdash; Neuschwanstein, Germany, 2005" style="max-width: 1440px">
-      <a href="#view-from-neuschwanstein-castle"><h2>View from Neuschwanstein Castle &mdash; Neuschwanstein, Germany, 2005</h2></a>
+      <a id="view-from-neuschwanstein-castle" href="view-from-neuschwanstein-castle.jpg" alt="View from Neuschwanstein Castle &mdash; Neuschwanstein, Germany, 2005" data-caption="View from Neuschwanstein Castle &mdash; Neuschwanstein, Germany, 2005"></a>
     
-      <a class="anchor" name="port-lindau"></a>
-      <img src="port-lindau.jpg" alt="Port Lindau &mdash; Lindau, Germany, 2005" style="max-width: 1440px">
-      <a href="#port-lindau"><h2>Port Lindau &mdash; Lindau, Germany, 2005</h2></a>
+      <a id="port-lindau" href="port-lindau.jpg" alt="Port Lindau &mdash; Lindau, Germany, 2005" data-caption="Port Lindau &mdash; Lindau, Germany, 2005"></a>
     
-      <a class="anchor" name="clockwork"></a>
-      <img src="clockwork.jpg" alt="Clockwork &mdash; Germany, 2005" style="max-width: 961px">
-      <a href="#clockwork"><h2>Clockwork &mdash; Germany, 2005</h2></a>
+      <a id="clockwork" href="clockwork.jpg" alt="Clockwork &mdash; Germany, 2005" data-caption="Clockwork &mdash; Germany, 2005"></a>
     
-      <a class="anchor" name="candles"></a>
-      <img src="candles.jpg" alt="Candles &mdash; Germany, 2005" style="max-width: 1440px">
-      <a href="#candles"><h2>Candles &mdash; Germany, 2005</h2></a>
+      <a id="candles" href="candles.jpg" alt="Candles &mdash; Germany, 2005" data-caption="Candles &mdash; Germany, 2005"></a>
     </div>
 
     <div id="nav"></div>
 </div>
 
   <script>
-    $(function() {
-      (site.currentPage = site.photo).init();
-    });
+    (site.currentPage = site.photo).init();
   </script>
 </body>
 </html>

@@ -18,129 +18,95 @@
   <link rel="stylesheet" type="text/css" href="/css/fotorama.css">
   <link rel="stylesheet" type="text/css" href="/css/photo.css" />
 
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script>
     if (!window.jQuery) {
-      document.write('<script src="/js/lib/jquery-1.11.1.min.js"><\/script>');
+      document.write('<script src="/js/lib/jquery-1.11.3.min.js"><\/script>');
     }
   </script>
   <script src="/js/lib/fotorama.js"></script>
   <script src="/js/lib/imagesloaded.pkgd.min.js"></script>
   <script src="/js/photo.js"></script>
-</head> 
+</head>
 
-<body class="photo">
+<body class="photo nojs">
   <script src="/js/lib/respond.min.js"></script>
-  <script>document.body.className += ' js';</script>
+  <script>
+    var c = document.body.className;
+    c = c.replace(' nojs', '');
+    c += ' js';
+    document.body.className = c;
+  </script>
 
   <div id="header">
     <h1><a class="jn" href="http://www.johnnovak.net/">John Novak</a> <a class="photo" href="/">Photography</a></h1>
 
-    <div class="menu">
-      <ul class="categories">
-        <li><a href="/mannequins/">Mannequins</a></li>
-        <li><a href="/urban/">Urban</a></li>
-        <li><a href="/people/">People</a></li>
-        <li><a href="/bw/">B&W</a></li>
-      </ul>
-      <p class="about"><a href="/about/">About</a></p>
-    </div>
+    <ul class="menu">
+      <li class="category"><a href="/mannequins/">Mannequins</a></li>
+      <li class="category"><a href="/urban/">Urban</a></li>
+      <li class="category"><a href="/people/">People</a></li>
+      <li class="category"><a href="/events/">Events</a></li>
+      <li class="category"><a href="/bw/">Black & White</a></li>
+      <li class="about"><a href="/about/">About</a></li>
+    </ul>
   </div>
 
   <div id="content">
+    <noscript>
+      <div class="no-javascript">
+        Viewing the photo galleries requires JavaScript.
+      </div>
+    </noscript>
+
     <div id="fotorama" data-auto="false">
-      <a class="anchor" name="best-friends"></a>
-      <img src="best-friends.jpg" alt="Best Friends &mdash; Budapest, Hungary, 2005" style="max-width: 949px">
-      <a href="#best-friends"><h2>Best Friends &mdash; Budapest, Hungary, 2005</h2></a>
+      <a id="best-friends" href="best-friends.jpg" alt="Best Friends &mdash; Budapest, Hungary, 2005" data-caption="Best Friends &mdash; Budapest, Hungary, 2005"></a>
     
-      <a class="anchor" name="dead-jungle-lines"></a>
-      <img src="dead-jungle-lines.jpg" alt="Dead Jungle Lines &mdash; Budapest, Hungary, 2004" style="max-width: 1440px">
-      <a href="#dead-jungle-lines"><h2>Dead Jungle Lines &mdash; Budapest, Hungary, 2004</h2></a>
+      <a id="dead-jungle-lines" href="dead-jungle-lines.jpg" alt="Dead Jungle Lines &mdash; Budapest, Hungary, 2004" data-caption="Dead Jungle Lines &mdash; Budapest, Hungary, 2004"></a>
     
-      <a class="anchor" name="white-lounge"></a>
-      <img src="white-lounge.jpg" alt="White Lounge &mdash; Zamárdi, Hungary, 2007" style="max-width: 1440px">
-      <a href="#white-lounge"><h2>White Lounge &mdash; Zamárdi, Hungary, 2007</h2></a>
+      <a id="white-lounge" href="white-lounge.jpg" alt="White Lounge &mdash; Zamárdi, Hungary, 2007" data-caption="White Lounge &mdash; Zamárdi, Hungary, 2007"></a>
     
-      <a class="anchor" name="lets-play"></a>
-      <img src="lets-play.jpg" alt="Let's Play &mdash; Zürich, Switzerland, 2005" style="max-width: 1440px">
-      <a href="#lets-play"><h2>Let's Play &mdash; Zürich, Switzerland, 2005</h2></a>
+      <a id="lets-play" href="lets-play.jpg" alt="Let's Play &mdash; Zürich, Switzerland, 2005" data-caption="Let's Play &mdash; Zürich, Switzerland, 2005"></a>
     
-      <a class="anchor" name="20-minutes"></a>
-      <img src="20-minutes.jpg" alt="20 Minutes &mdash; Switzerland, 2007" style="max-width: 900px">
-      <a href="#20-minutes"><h2>20 Minutes &mdash; Switzerland, 2007</h2></a>
+      <a id="20-minutes" href="20-minutes.jpg" alt="20 Minutes &mdash; Switzerland, 2007" data-caption="20 Minutes &mdash; Switzerland, 2007"></a>
     
-      <a class="anchor" name="home-delivery"></a>
-      <img src="home-delivery.jpg" alt="Home Delivery &mdash; Austria, 2005" style="max-width: 960px">
-      <a href="#home-delivery"><h2>Home Delivery &mdash; Austria, 2005</h2></a>
+      <a id="home-delivery" href="home-delivery.jpg" alt="Home Delivery &mdash; Austria, 2005" data-caption="Home Delivery &mdash; Austria, 2005"></a>
     
-      <a class="anchor" name="evobike"></a>
-      <img src="evobike.jpg" alt="Evobike &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
-      <a href="#evobike"><h2>Evobike &mdash; Budapest, Hungary, 2008</h2></a>
+      <a id="evobike" href="evobike.jpg" alt="Evobike &mdash; Budapest, Hungary, 2008" data-caption="Evobike &mdash; Budapest, Hungary, 2008"></a>
     
-      <a class="anchor" name="showtime"></a>
-      <img src="showtime.jpg" alt="Showtime &mdash; Budapest, Hungary, 2005" style="max-width: 1440px">
-      <a href="#showtime"><h2>Showtime &mdash; Budapest, Hungary, 2005</h2></a>
+      <a id="showtime" href="showtime.jpg" alt="Showtime &mdash; Budapest, Hungary, 2005" data-caption="Showtime &mdash; Budapest, Hungary, 2005"></a>
     
-      <a class="anchor" name="happy-campers"></a>
-      <img src="happy-campers.jpg" alt="Happy Campers &mdash; Lake Balaton, Hungary, 2006" style="max-width: 960px">
-      <a href="#happy-campers"><h2>Happy Campers &mdash; Lake Balaton, Hungary, 2006</h2></a>
+      <a id="happy-campers" href="happy-campers.jpg" alt="Happy Campers &mdash; Lake Balaton, Hungary, 2006" data-caption="Happy Campers &mdash; Lake Balaton, Hungary, 2006"></a>
     
-      <a class="anchor" name="hiss"></a>
-      <img src="hiss.jpg" alt="Hiss &mdash; Budapest, Hungary, 2005" style="max-width: 960px">
-      <a href="#hiss"><h2>Hiss &mdash; Budapest, Hungary, 2005</h2></a>
+      <a id="hiss" href="hiss.jpg" alt="Hiss &mdash; Budapest, Hungary, 2005" data-caption="Hiss &mdash; Budapest, Hungary, 2005"></a>
     
-      <a class="anchor" name="li"></a>
-      <img src="li.jpg" alt="LI &mdash; Zamardi, Hungary, 2007" style="max-width: 960px">
-      <a href="#li"><h2>LI &mdash; Zamardi, Hungary, 2007</h2></a>
+      <a id="li" href="li.jpg" alt="LI &mdash; Zamardi, Hungary, 2007" data-caption="LI &mdash; Zamardi, Hungary, 2007"></a>
     
-      <a class="anchor" name="master-and-servant"></a>
-      <img src="master-and-servant.jpg" alt="Master and Servant &mdash; Austria, 2007" style="max-width: 1440px">
-      <a href="#master-and-servant"><h2>Master and Servant &mdash; Austria, 2007</h2></a>
+      <a id="master-and-servant" href="master-and-servant.jpg" alt="Master and Servant &mdash; Austria, 2007" data-caption="Master and Servant &mdash; Austria, 2007"></a>
     
-      <a class="anchor" name="recursion"></a>
-      <img src="recursion.jpg" alt="Recursion &mdash; France, 2007" style="max-width: 1440px">
-      <a href="#recursion"><h2>Recursion &mdash; France, 2007</h2></a>
+      <a id="recursion" href="recursion.jpg" alt="Recursion &mdash; France, 2007" data-caption="Recursion &mdash; France, 2007"></a>
     
-      <a class="anchor" name="secret-garden"></a>
-      <img src="secret-garden.jpg" alt="Secret Garden &mdash; Sydney, Australia, 2011" style="max-width: 1440px">
-      <a href="#secret-garden"><h2>Secret Garden &mdash; Sydney, Australia, 2011</h2></a>
+      <a id="secret-garden" href="secret-garden.jpg" alt="Secret Garden &mdash; Sydney, Australia, 2011" data-caption="Secret Garden &mdash; Sydney, Australia, 2011"></a>
     
-      <a class="anchor" name="t-1000"></a>
-      <img src="t-1000.jpg" alt="T-1000 &mdash; Budapest, Hungary, 2008" style="max-width: 960px">
-      <a href="#t-1000"><h2>T-1000 &mdash; Budapest, Hungary, 2008</h2></a>
+      <a id="t-1000" href="t-1000.jpg" alt="T-1000 &mdash; Budapest, Hungary, 2008" data-caption="T-1000 &mdash; Budapest, Hungary, 2008"></a>
     
-      <a class="anchor" name="dj-bootsie"></a>
-      <img src="dj-bootsie.jpg" alt="DJ Bootsie &mdash; Zamardi, Hungary, 2007" style="max-width: 960px">
-      <a href="#dj-bootsie"><h2>DJ Bootsie &mdash; Zamardi, Hungary, 2007</h2></a>
+      <a id="dj-bootsie" href="dj-bootsie.jpg" alt="DJ Bootsie &mdash; Zamardi, Hungary, 2007" data-caption="DJ Bootsie &mdash; Zamardi, Hungary, 2007"></a>
     
-      <a class="anchor" name="ninth"></a>
-      <img src="ninth.jpg" alt="Ninth &mdash; Budapest, Hungary, 2008" style="max-width: 960px">
-      <a href="#ninth"><h2>Ninth &mdash; Budapest, Hungary, 2008</h2></a>
+      <a id="ninth" href="ninth.jpg" alt="Ninth &mdash; Budapest, Hungary, 2008" data-caption="Ninth &mdash; Budapest, Hungary, 2008"></a>
     
-      <a class="anchor" name="space-ballet"></a>
-      <img src="space-ballet.jpg" alt="Space Ballet &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
-      <a href="#space-ballet"><h2>Space Ballet &mdash; Budapest, Hungary, 2008</h2></a>
+      <a id="space-ballet" href="space-ballet.jpg" alt="Space Ballet &mdash; Budapest, Hungary, 2008" data-caption="Space Ballet &mdash; Budapest, Hungary, 2008"></a>
     
-      <a class="anchor" name="pet-cat"></a>
-      <img src="pet-cat.jpg" alt="Pet Cat &mdash; Beerwah, Australia, 2009" style="max-width: 1440px">
-      <a href="#pet-cat"><h2>Pet Cat &mdash; Beerwah, Australia, 2009</h2></a>
+      <a id="pet-cat" href="pet-cat.jpg" alt="Pet Cat &mdash; Beerwah, Australia, 2009" data-caption="Pet Cat &mdash; Beerwah, Australia, 2009"></a>
     
-      <a class="anchor" name="selffragment"></a>
-      <img src="selffragment.jpg" alt="Selffragment &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
-      <a href="#selffragment"><h2>Selffragment &mdash; Budapest, Hungary, 2008</h2></a>
+      <a id="selffragment" href="selffragment.jpg" alt="Selffragment &mdash; Budapest, Hungary, 2008" data-caption="Selffragment &mdash; Budapest, Hungary, 2008"></a>
     
-      <a class="anchor" name="ghost"></a>
-      <img src="ghost.jpg" alt="Ghost &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
-      <a href="#ghost"><h2>Ghost &mdash; Budapest, Hungary, 2008</h2></a>
+      <a id="ghost" href="ghost.jpg" alt="Ghost &mdash; Budapest, Hungary, 2008" data-caption="Ghost &mdash; Budapest, Hungary, 2008"></a>
     </div>
 
     <div id="nav"></div>
 </div>
 
   <script>
-    $(function() {
-      (site.currentPage = site.photo).init();
-    });
+    (site.currentPage = site.photo).init();
   </script>
 </body>
 </html>

@@ -18,89 +18,75 @@
   <link rel="stylesheet" type="text/css" href="/css/fotorama.css">
   <link rel="stylesheet" type="text/css" href="/css/photo.css" />
 
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script>
     if (!window.jQuery) {
-      document.write('<script src="/js/lib/jquery-1.11.1.min.js"><\/script>');
+      document.write('<script src="/js/lib/jquery-1.11.3.min.js"><\/script>');
     }
   </script>
   <script src="/js/lib/fotorama.js"></script>
   <script src="/js/lib/imagesloaded.pkgd.min.js"></script>
   <script src="/js/photo.js"></script>
-</head> 
+</head>
 
-<body class="photo">
+<body class="photo nojs">
   <script src="/js/lib/respond.min.js"></script>
-  <script>document.body.className += ' js';</script>
+  <script>
+    var c = document.body.className;
+    c = c.replace(' nojs', '');
+    c += ' js';
+    document.body.className = c;
+  </script>
 
   <div id="header">
     <h1><a class="jn" href="http://www.johnnovak.net/">John Novak</a> <a class="photo" href="/">Photography</a></h1>
 
-    <div class="menu">
-      <ul class="categories">
-        <li><a href="/mannequins/">Mannequins</a></li>
-        <li><a href="/urban/">Urban</a></li>
-        <li><a href="/people/">People</a></li>
-        <li><a href="/bw/">B&W</a></li>
-      </ul>
-      <p class="about"><a href="/about/">About</a></p>
-    </div>
+    <ul class="menu">
+      <li class="category"><a href="/mannequins/">Mannequins</a></li>
+      <li class="category"><a href="/urban/">Urban</a></li>
+      <li class="category"><a href="/people/">People</a></li>
+      <li class="category"><a href="/events/">Events</a></li>
+      <li class="category"><a href="/bw/">Black & White</a></li>
+      <li class="about"><a href="/about/">About</a></li>
+    </ul>
   </div>
 
   <div id="content">
+    <noscript>
+      <div class="no-javascript">
+        Viewing the photo galleries requires JavaScript.
+      </div>
+    </noscript>
+
     <div id="fotorama" data-auto="false">
-      <a class="anchor" name="before-the-storm"></a>
-      <img src="before-the-storm.jpg" alt="Before the Storm &mdash; Brisbane, Australia, 2009" style="max-width: 1440px">
-      <a href="#before-the-storm"><h2>Before the Storm &mdash; Brisbane, Australia, 2009</h2></a>
+      <a id="before-the-storm" href="before-the-storm.jpg" alt="Before the Storm &mdash; Brisbane, Australia, 2009" data-caption="Before the Storm &mdash; Brisbane, Australia, 2009"></a>
     
-      <a class="anchor" name="riverside"></a>
-      <img src="riverside.jpg" alt="Riverside &mdash; Brisbane, Australia, 2009" style="max-width: 960px">
-      <a href="#riverside"><h2>Riverside &mdash; Brisbane, Australia, 2009</h2></a>
+      <a id="riverside" href="riverside.jpg" alt="Riverside &mdash; Brisbane, Australia, 2009" data-caption="Riverside &mdash; Brisbane, Australia, 2009"></a>
     
-      <a class="anchor" name="purple-haze"></a>
-      <img src="purple-haze.jpg" alt="Purple Haze &mdash; Brisbane, Australia, 2009" style="max-width: 1440px">
-      <a href="#purple-haze"><h2>Purple Haze &mdash; Brisbane, Australia, 2009</h2></a>
+      <a id="purple-haze" href="purple-haze.jpg" alt="Purple Haze &mdash; Brisbane, Australia, 2009" data-caption="Purple Haze &mdash; Brisbane, Australia, 2009"></a>
     
-      <a class="anchor" name="acrylic-sundown"></a>
-      <img src="acrylic-sundown.jpg" alt="Acrylic Sundown &mdash; Brisbane, Australia, 2011" style="max-width: 1440px">
-      <a href="#acrylic-sundown"><h2>Acrylic Sundown &mdash; Brisbane, Australia, 2011</h2></a>
+      <a id="acrylic-sundown" href="acrylic-sundown.jpg" alt="Acrylic Sundown &mdash; Brisbane, Australia, 2011" data-caption="Acrylic Sundown &mdash; Brisbane, Australia, 2011"></a>
     
-      <a class="anchor" name="royal-purple"></a>
-      <img src="royal-purple.jpg" alt="Royal Purple &mdash; Brisbane, Australia, 2011" style="max-width: 1440px">
-      <a href="#royal-purple"><h2>Royal Purple &mdash; Brisbane, Australia, 2011</h2></a>
+      <a id="royal-purple" href="royal-purple.jpg" alt="Royal Purple &mdash; Brisbane, Australia, 2011" data-caption="Royal Purple &mdash; Brisbane, Australia, 2011"></a>
     
-      <a class="anchor" name="torch"></a>
-      <img src="torch.jpg" alt="Torch &mdash; Brisbane, Australia, 2011" style="max-width: 1440px">
-      <a href="#torch"><h2>Torch &mdash; Brisbane, Australia, 2011</h2></a>
+      <a id="torch" href="torch.jpg" alt="Torch &mdash; Brisbane, Australia, 2011" data-caption="Torch &mdash; Brisbane, Australia, 2011"></a>
     
-      <a class="anchor" name="treasury"></a>
-      <img src="treasury.jpg" alt="Treasury &mdash; Brisbane, Australia, 2012" style="max-width: 1440px">
-      <a href="#treasury"><h2>Treasury &mdash; Brisbane, Australia, 2012</h2></a>
+      <a id="treasury" href="treasury.jpg" alt="Treasury &mdash; Brisbane, Australia, 2012" data-caption="Treasury &mdash; Brisbane, Australia, 2012"></a>
     
-      <a class="anchor" name="vortex"></a>
-      <img src="vortex.jpg" alt="Vortex &mdash; Brisbane, Australia, 2012" style="max-width: 1440px">
-      <a href="#vortex"><h2>Vortex &mdash; Brisbane, Australia, 2012</h2></a>
+      <a id="vortex" href="vortex.jpg" alt="Vortex &mdash; Brisbane, Australia, 2012" data-caption="Vortex &mdash; Brisbane, Australia, 2012"></a>
     
-      <a class="anchor" name="the-singularity-is-near"></a>
-      <img src="the-singularity-is-near.jpg" alt="The Singularity Is Near &mdash; Brisbane, Australia, 2011" style="max-width: 1440px">
-      <a href="#the-singularity-is-near"><h2>The Singularity Is Near &mdash; Brisbane, Australia, 2011</h2></a>
+      <a id="the-singularity-is-near" href="the-singularity-is-near.jpg" alt="The Singularity Is Near &mdash; Brisbane, Australia, 2011" data-caption="The Singularity Is Near &mdash; Brisbane, Australia, 2011"></a>
     
-      <a class="anchor" name="sanctuary"></a>
-      <img src="sanctuary.jpg" alt="Sanctuary &mdash; Brisbane, Australia, 2009" style="max-width: 1440px">
-      <a href="#sanctuary"><h2>Sanctuary &mdash; Brisbane, Australia, 2009</h2></a>
+      <a id="sanctuary" href="sanctuary.jpg" alt="Sanctuary &mdash; Brisbane, Australia, 2009" data-caption="Sanctuary &mdash; Brisbane, Australia, 2009"></a>
     
-      <a class="anchor" name="ghost-boat"></a>
-      <img src="ghost-boat.jpg" alt="Ghost Boat &mdash; Sydney, Australia, 2011" style="max-width: 2433px">
-      <a href="#ghost-boat"><h2>Ghost Boat &mdash; Sydney, Australia, 2011</h2></a>
+      <a id="ghost-boat" href="ghost-boat.jpg" alt="Ghost Boat &mdash; Sydney, Australia, 2011" data-caption="Ghost Boat &mdash; Sydney, Australia, 2011"></a>
     </div>
 
     <div id="nav"></div>
 </div>
 
   <script>
-    $(function() {
-      (site.currentPage = site.photo).init();
-    });
+    (site.currentPage = site.photo).init();
   </script>
 </body>
 </html>

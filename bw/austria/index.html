@@ -18,101 +18,81 @@
   <link rel="stylesheet" type="text/css" href="/css/fotorama.css">
   <link rel="stylesheet" type="text/css" href="/css/photo.css" />
 
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script>
     if (!window.jQuery) {
-      document.write('<script src="/js/lib/jquery-1.11.1.min.js"><\/script>');
+      document.write('<script src="/js/lib/jquery-1.11.3.min.js"><\/script>');
     }
   </script>
   <script src="/js/lib/fotorama.js"></script>
   <script src="/js/lib/imagesloaded.pkgd.min.js"></script>
   <script src="/js/photo.js"></script>
-</head> 
+</head>
 
-<body class="photo">
+<body class="photo nojs">
   <script src="/js/lib/respond.min.js"></script>
-  <script>document.body.className += ' js';</script>
+  <script>
+    var c = document.body.className;
+    c = c.replace(' nojs', '');
+    c += ' js';
+    document.body.className = c;
+  </script>
 
   <div id="header">
     <h1><a class="jn" href="http://www.johnnovak.net/">John Novak</a> <a class="photo" href="/">Photography</a></h1>
 
-    <div class="menu">
-      <ul class="categories">
-        <li><a href="/mannequins/">Mannequins</a></li>
-        <li><a href="/urban/">Urban</a></li>
-        <li><a href="/people/">People</a></li>
-        <li><a href="/bw/">B&W</a></li>
-      </ul>
-      <p class="about"><a href="/about/">About</a></p>
-    </div>
+    <ul class="menu">
+      <li class="category"><a href="/mannequins/">Mannequins</a></li>
+      <li class="category"><a href="/urban/">Urban</a></li>
+      <li class="category"><a href="/people/">People</a></li>
+      <li class="category"><a href="/events/">Events</a></li>
+      <li class="category"><a href="/bw/">Black & White</a></li>
+      <li class="about"><a href="/about/">About</a></li>
+    </ul>
   </div>
 
   <div id="content">
+    <noscript>
+      <div class="no-javascript">
+        Viewing the photo galleries requires JavaScript.
+      </div>
+    </noscript>
+
     <div id="fotorama" data-auto="false">
-      <a class="anchor" name="abandoned"></a>
-      <img src="abandoned.jpg" alt="Abandoned &mdash; Austria, 2005" style="max-width: 1440px">
-      <a href="#abandoned"><h2>Abandoned &mdash; Austria, 2005</h2></a>
+      <a id="abandoned" href="abandoned.jpg" alt="Abandoned &mdash; Austria, 2005" data-caption="Abandoned &mdash; Austria, 2005"></a>
     
-      <a class="anchor" name="cloud-wars"></a>
-      <img src="cloud-wars.jpg" alt="Cloud Wars &mdash; Austria, 2004" style="max-width: 1440px">
-      <a href="#cloud-wars"><h2>Cloud Wars &mdash; Austria, 2004</h2></a>
+      <a id="cloud-wars" href="cloud-wars.jpg" alt="Cloud Wars &mdash; Austria, 2004" data-caption="Cloud Wars &mdash; Austria, 2004"></a>
     
-      <a class="anchor" name="contemplating"></a>
-      <img src="contemplating.jpg" alt="Contemplating &mdash; Gerlitzen, Austria, 2005" style="max-width: 1440px">
-      <a href="#contemplating"><h2>Contemplating &mdash; Gerlitzen, Austria, 2005</h2></a>
+      <a id="contemplating" href="contemplating.jpg" alt="Contemplating &mdash; Gerlitzen, Austria, 2005" data-caption="Contemplating &mdash; Gerlitzen, Austria, 2005"></a>
     
-      <a class="anchor" name="dam"></a>
-      <img src="dam.jpg" alt="Dam &mdash; Austria, 2004" style="max-width: 1080px">
-      <a href="#dam"><h2>Dam &mdash; Austria, 2004</h2></a>
+      <a id="dam" href="dam.jpg" alt="Dam &mdash; Austria, 2004" data-caption="Dam &mdash; Austria, 2004"></a>
     
-      <a class="anchor" name="evening-reflections"></a>
-      <img src="evening-reflections.jpg" alt="Evening Reflections &mdash; Austria, 2004" style="max-width: 1440px">
-      <a href="#evening-reflections"><h2>Evening Reflections &mdash; Austria, 2004</h2></a>
+      <a id="evening-reflections" href="evening-reflections.jpg" alt="Evening Reflections &mdash; Austria, 2004" data-caption="Evening Reflections &mdash; Austria, 2004"></a>
     
-      <a class="anchor" name="forest"></a>
-      <img src="forest.jpg" alt="Forest &mdash; Austria, 2005" style="max-width: 961px">
-      <a href="#forest"><h2>Forest &mdash; Austria, 2005</h2></a>
+      <a id="forest" href="forest.jpg" alt="Forest &mdash; Austria, 2005" data-caption="Forest &mdash; Austria, 2005"></a>
     
-      <a class="anchor" name="shadow"></a>
-      <img src="shadow.jpg" alt="Shadow &mdash; Vienna, Austria, 2006" style="max-width: 960px">
-      <a href="#shadow"><h2>Shadow &mdash; Vienna, Austria, 2006</h2></a>
+      <a id="shadow" href="shadow.jpg" alt="Shadow &mdash; Vienna, Austria, 2006" data-caption="Shadow &mdash; Vienna, Austria, 2006"></a>
     
-      <a class="anchor" name="little-boy"></a>
-      <img src="little-boy.jpg" alt="Little Boy &mdash; Vienna, Austria, 2006" style="max-width: 960px">
-      <a href="#little-boy"><h2>Little Boy &mdash; Vienna, Austria, 2006</h2></a>
+      <a id="little-boy" href="little-boy.jpg" alt="Little Boy &mdash; Vienna, Austria, 2006" data-caption="Little Boy &mdash; Vienna, Austria, 2006"></a>
     
-      <a class="anchor" name="lone-tree"></a>
-      <img src="lone-tree.jpg" alt="Lone Tree &mdash; Austria, 2005" style="max-width: 1440px">
-      <a href="#lone-tree"><h2>Lone Tree &mdash; Austria, 2005</h2></a>
+      <a id="lone-tree" href="lone-tree.jpg" alt="Lone Tree &mdash; Austria, 2005" data-caption="Lone Tree &mdash; Austria, 2005"></a>
     
-      <a class="anchor" name="misty-mountains"></a>
-      <img src="misty-mountains.jpg" alt="Misty Mountains &mdash; Austria, 2004" style="max-width: 1440px">
-      <a href="#misty-mountains"><h2>Misty Mountains &mdash; Austria, 2004</h2></a>
+      <a id="misty-mountains" href="misty-mountains.jpg" alt="Misty Mountains &mdash; Austria, 2004" data-caption="Misty Mountains &mdash; Austria, 2004"></a>
     
-      <a class="anchor" name="mountain-path"></a>
-      <img src="mountain-path.jpg" alt="Mountain Path &mdash; Austria, 2004" style="max-width: 961px">
-      <a href="#mountain-path"><h2>Mountain Path &mdash; Austria, 2004</h2></a>
+      <a id="mountain-path" href="mountain-path.jpg" alt="Mountain Path &mdash; Austria, 2004" data-caption="Mountain Path &mdash; Austria, 2004"></a>
     
-      <a class="anchor" name="ruined-wall"></a>
-      <img src="ruined-wall.jpg" alt="Ruined Wall &mdash; Austria, 2004" style="max-width: 1440px">
-      <a href="#ruined-wall"><h2>Ruined Wall &mdash; Austria, 2004</h2></a>
+      <a id="ruined-wall" href="ruined-wall.jpg" alt="Ruined Wall &mdash; Austria, 2004" data-caption="Ruined Wall &mdash; Austria, 2004"></a>
     
-      <a class="anchor" name="shreds"></a>
-      <img src="shreds.jpg" alt="Shreds &mdash; Gerlitzen, Austria, 2005" style="max-width: 1440px">
-      <a href="#shreds"><h2>Shreds &mdash; Gerlitzen, Austria, 2005</h2></a>
+      <a id="shreds" href="shreds.jpg" alt="Shreds &mdash; Gerlitzen, Austria, 2005" data-caption="Shreds &mdash; Gerlitzen, Austria, 2005"></a>
     
-      <a class="anchor" name="taking-off"></a>
-      <img src="taking-off.jpg" alt="Taking Off &mdash; Austria, 2006" style="max-width: 1440px">
-      <a href="#taking-off"><h2>Taking Off &mdash; Austria, 2006</h2></a>
+      <a id="taking-off" href="taking-off.jpg" alt="Taking Off &mdash; Austria, 2006" data-caption="Taking Off &mdash; Austria, 2006"></a>
     </div>
 
     <div id="nav"></div>
 </div>
 
   <script>
-    $(function() {
-      (site.currentPage = site.photo).init();
-    });
+    (site.currentPage = site.photo).init();
   </script>
 </body>
 </html>

@@ -18,33 +18,37 @@
   <link rel="stylesheet" type="text/css" href="/css/fotorama.css">
   <link rel="stylesheet" type="text/css" href="/css/photo.css" />
 
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script>
     if (!window.jQuery) {
-      document.write('<script src="/js/lib/jquery-1.11.1.min.js"><\/script>');
+      document.write('<script src="/js/lib/jquery-1.11.3.min.js"><\/script>');
     }
   </script>
   <script src="/js/lib/fotorama.js"></script>
   <script src="/js/lib/imagesloaded.pkgd.min.js"></script>
   <script src="/js/photo.js"></script>
-</head> 
+</head>
 
-<body class="albums">
+<body class="albums nojs">
   <script src="/js/lib/respond.min.js"></script>
-  <script>document.body.className += ' js';</script>
+  <script>
+    var c = document.body.className;
+    c = c.replace(' nojs', '');
+    c += ' js';
+    document.body.className = c;
+  </script>
 
   <div id="header">
     <h1><a class="jn" href="http://www.johnnovak.net/">John Novak</a> <a class="photo" href="/">Photography</a></h1>
 
-    <div class="menu">
-      <ul class="categories">
-        <li><a href="/mannequins/">Mannequins</a></li>
-        <li><a href="/urban/">Urban</a></li>
-        <li><a href="/people/">People</a></li>
-        <li><a href="/bw/">B&W</a></li>
-      </ul>
-      <p class="about"><a href="/about/">About</a></p>
-    </div>
+    <ul class="menu">
+      <li class="category"><a href="/mannequins/">Mannequins</a></li>
+      <li class="category"><a href="/urban/">Urban</a></li>
+      <li class="category"><a href="/people/">People</a></li>
+      <li class="category"><a href="/events/">Events</a></li>
+      <li class="category"><a href="/bw/">Black & White</a></li>
+      <li class="about"><a href="/about/">About</a></li>
+    </ul>
   </div>
 
   <div id="content">
@@ -95,9 +99,7 @@
 </div>
 
   <script>
-    $(function() {
-      (site.currentPage = site.albums).init();
-    });
+    (site.currentPage = site.albums).init();
   </script>
 </body>
 </html>

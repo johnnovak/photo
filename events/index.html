@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    if (window.location == 'http://www.johnnovak.net/photo/') {
+      window.location = 'http://photo.johnnovak.net/';
+    }
+  </script>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, target-densityDpi=160, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="John Novak Photography" />
+  <meta name="author" content="John Novak">
+
+  <title>John Novak Photography</title>
+
+  <link rel="stylesheet" type="text/css" href="/css/fotorama.css">
+  <link rel="stylesheet" type="text/css" href="/css/photo.css" />
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script>
+    if (!window.jQuery) {
+      document.write('<script src="/js/lib/jquery-1.11.3.min.js"><\/script>');
+    }
+  </script>
+  <script src="/js/lib/fotorama.js"></script>
+  <script src="/js/lib/imagesloaded.pkgd.min.js"></script>
+  <script src="/js/photo.js"></script>
+</head>
+
+<body class="albums nojs">
+  <script src="/js/lib/respond.min.js"></script>
+  <script>
+    var c = document.body.className;
+    c = c.replace(' nojs', '');
+    c += ' js';
+    document.body.className = c;
+  </script>
+
+  <div id="header">
+    <h1><a class="jn" href="http://www.johnnovak.net/">John Novak</a> <a class="photo" href="/">Photography</a></h1>
+
+    <ul class="menu">
+      <li class="category"><a href="/mannequins/">Mannequins</a></li>
+      <li class="category"><a href="/urban/">Urban</a></li>
+      <li class="category"><a href="/people/">People</a></li>
+      <li class="category"><a href="/events/">Events</a></li>
+      <li class="category"><a href="/bw/">Black & White</a></li>
+      <li class="about"><a href="/about/">About</a></li>
+    </ul>
+  </div>
+
+  <div id="content">
+    <div id="albums">
+      <div class="thumbs">
+      <div class="album odd">
+          <a href="/events/anima-prizma-2015/"><img src="/events/anima-prizma-2015/_album.jpg" alt="Anima Prizma @ Tattoo the Sun V, 2015" /></a>
+          <h2><a href="/events/anima-prizma-2015/">Anima Prizma @ Tattoo the Sun V, 2015</a></h2>
+        </div>
+      <div class="album even last">
+          <a href="/events/watch-my-dying-2015/"><img src="/events/watch-my-dying-2015/_album.jpg" alt="Watch My Dying @ Tattoo the Sun V, 2015" /></a>
+          <h2><a href="/events/watch-my-dying-2015/">Watch My Dying @ Tattoo the Sun V, 2015</a></h2>
+        </div>
+      </div>
+    </div>
+</div>
+
+  <script>
+    (site.currentPage = site.albums).init();
+  </script>
+</body>
+</html>

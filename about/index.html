@@ -18,48 +18,88 @@
   <link rel="stylesheet" type="text/css" href="/css/fotorama.css">
   <link rel="stylesheet" type="text/css" href="/css/photo.css" />
 
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script>
     if (!window.jQuery) {
-      document.write('<script src="/js/lib/jquery-1.11.1.min.js"><\/script>');
+      document.write('<script src="/js/lib/jquery-1.11.3.min.js"><\/script>');
     }
   </script>
   <script src="/js/lib/fotorama.js"></script>
   <script src="/js/lib/imagesloaded.pkgd.min.js"></script>
   <script src="/js/photo.js"></script>
-</head> 
+</head>
 
-<body class="about">
+<body class="about nojs">
   <script src="/js/lib/respond.min.js"></script>
-  <script>document.body.className += ' js';</script>
+  <script>
+    var c = document.body.className;
+    c = c.replace(' nojs', '');
+    c += ' js';
+    document.body.className = c;
+  </script>
 
   <div id="header">
     <h1><a class="jn" href="http://www.johnnovak.net/">John Novak</a> <a class="photo" href="/">Photography</a></h1>
 
-    <div class="menu">
-      <ul class="categories">
-        <li><a href="/mannequins/">Mannequins</a></li>
-        <li><a href="/urban/">Urban</a></li>
-        <li><a href="/people/">People</a></li>
-        <li><a href="/bw/">B&W</a></li>
-      </ul>
-      <p class="about"><a href="/about/">About</a></p>
-    </div>
+    <ul class="menu">
+      <li class="category"><a href="/mannequins/">Mannequins</a></li>
+      <li class="category"><a href="/urban/">Urban</a></li>
+      <li class="category"><a href="/people/">People</a></li>
+      <li class="category"><a href="/events/">Events</a></li>
+      <li class="category"><a href="/bw/">Black & White</a></li>
+      <li class="about"><a href="/about/">About</a></li>
+    </ul>
   </div>
 
   <div id="content">
     <div id="about">
-      <img src="/img/selffragment.jpg" alt="John Novak" />
+      <img src="/img/self.jpg" alt="John Novak" />
       <div class="text">
-        <p>Coming soon...</p>
+        <p>Arguably, you can't really write about yourself without sounding
+        like a narcissist. So here we go, I'll try to keep this short and
+        be relatively modest about it.</p>
+
+        <p>I'm a 36 year old photographer living in Brisbane, Australia with
+        15+ years of experience in various genres of photography<span
+          class="index">1</span>.  I equally enjoy all aspects of the
+        photographic process, such as scouting out locations, interacting with
+        models, <span class="delete">obsessing over lens sharpness at
+          f1.8</span> the technical aspects of photography and post-processing
+        images.  Editing and colour grading digital images is at least as much
+        fun for me as the actual shooting, but I always take great care not to
+        hurt those innocent little pixels too much and keep the results
+        natural looking.</p>
+
+        <p>I love shooting on location using just available light.  Generally
+        speaking, my method is rather intuitive; I prefer to just go with the
+        flow and let the circumstances shape my initial vision, as embracing
+        unpredictability oftentimes leads to great results (well, in addition
+        to missed shots and blurry photographs).</p>
+
+        <p>Apart from taking (mostly) pretty pictures, I also write <a
+          href="http://johnnovak.bandcamp.com/">weird electronic music</a> and
+        like to <a href="https://github.com/johnnovak/">code</a> (the source
+        code of this whole website can be found <a
+          href="https://github.com/johnnovak/johnnovak.site">here</a>).</p>
+
+        <p>Drop me a line for friendship or business at <a
+          href="mailto:john@johnnovak.net">john@johnnovak.net</a></p>
+
+        <ol class="footnote">
+          <li>As it is readily evident from looking at <a href="/mannequins/">this
+            gallery</a>, I also suffer from a rare condition called
+          <em>Mannequinophilia</em>, which
+        has fortunately been greatly alleviated by the large number of <a
+          href="/people/">model shots</a> I have completed
+        just recently that feature some <em>actual</em> humans...
+          </li>
+      </ol>
       </div>
     </div>
 </div>
 
   <script>
-    $(function() {
-      (site.currentPage = site.about).init();
-    });
+    (site.currentPage = site.about).init();
   </script>
 </body>
 </html>

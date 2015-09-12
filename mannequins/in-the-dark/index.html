@@ -18,165 +18,113 @@
   <link rel="stylesheet" type="text/css" href="/css/fotorama.css">
   <link rel="stylesheet" type="text/css" href="/css/photo.css" />
 
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script>
     if (!window.jQuery) {
-      document.write('<script src="/js/lib/jquery-1.11.1.min.js"><\/script>');
+      document.write('<script src="/js/lib/jquery-1.11.3.min.js"><\/script>');
     }
   </script>
   <script src="/js/lib/fotorama.js"></script>
   <script src="/js/lib/imagesloaded.pkgd.min.js"></script>
   <script src="/js/photo.js"></script>
-</head> 
+</head>
 
-<body class="photo">
+<body class="photo nojs">
   <script src="/js/lib/respond.min.js"></script>
-  <script>document.body.className += ' js';</script>
+  <script>
+    var c = document.body.className;
+    c = c.replace(' nojs', '');
+    c += ' js';
+    document.body.className = c;
+  </script>
 
   <div id="header">
     <h1><a class="jn" href="http://www.johnnovak.net/">John Novak</a> <a class="photo" href="/">Photography</a></h1>
 
-    <div class="menu">
-      <ul class="categories">
-        <li><a href="/mannequins/">Mannequins</a></li>
-        <li><a href="/urban/">Urban</a></li>
-        <li><a href="/people/">People</a></li>
-        <li><a href="/bw/">B&W</a></li>
-      </ul>
-      <p class="about"><a href="/about/">About</a></p>
-    </div>
+    <ul class="menu">
+      <li class="category"><a href="/mannequins/">Mannequins</a></li>
+      <li class="category"><a href="/urban/">Urban</a></li>
+      <li class="category"><a href="/people/">People</a></li>
+      <li class="category"><a href="/events/">Events</a></li>
+      <li class="category"><a href="/bw/">Black & White</a></li>
+      <li class="about"><a href="/about/">About</a></li>
+    </ul>
   </div>
 
   <div id="content">
+    <noscript>
+      <div class="no-javascript">
+        Viewing the photo galleries requires JavaScript.
+      </div>
+    </noscript>
+
     <div id="fotorama" data-auto="false">
-      <a class="anchor" name="bloom"></a>
-      <img src="bloom.jpg" alt="Bloom &mdash; Singapore, 2012" style="max-width: 1440px">
-      <a href="#bloom"><h2>Bloom &mdash; Singapore, 2012</h2></a>
+      <a id="bloom" href="bloom.jpg" alt="Bloom &mdash; Singapore, 2012" data-caption="Bloom &mdash; Singapore, 2012"></a>
     
-      <a class="anchor" name="queen-in-exile"></a>
-      <img src="queen-in-exile.jpg" alt="Queen in Exile &mdash; Singapore, 2012" style="max-width: 1440px">
-      <a href="#queen-in-exile"><h2>Queen in Exile &mdash; Singapore, 2012</h2></a>
+      <a id="queen-in-exile" href="queen-in-exile.jpg" alt="Queen in Exile &mdash; Singapore, 2012" data-caption="Queen in Exile &mdash; Singapore, 2012"></a>
     
-      <a class="anchor" name="azure-bonds"></a>
-      <img src="azure-bonds.jpg" alt="Azure Bonds &mdash; Nagyvárad, Romania, 2008" style="max-width: 949px">
-      <a href="#azure-bonds"><h2>Azure Bonds &mdash; Nagyvárad, Romania, 2008</h2></a>
+      <a id="azure-bonds" href="azure-bonds.jpg" alt="Azure Bonds &mdash; Nagyvárad, Romania, 2008" data-caption="Azure Bonds &mdash; Nagyvárad, Romania, 2008"></a>
     
-      <a class="anchor" name="allurement"></a>
-      <img src="allurement.jpg" alt="Allurement &mdash; Budapest, Hungary, 2010" style="max-width: 1440px">
-      <a href="#allurement"><h2>Allurement &mdash; Budapest, Hungary, 2010</h2></a>
+      <a id="allurement" href="allurement.jpg" alt="Allurement &mdash; Budapest, Hungary, 2010" data-caption="Allurement &mdash; Budapest, Hungary, 2010"></a>
     
-      <a class="anchor" name="beneath-the-black-ice"></a>
-      <img src="beneath-the-black-ice.jpg" alt="Beneath the Black Ice &mdash; Budapest, Hungary, 2009" style="max-width: 1440px">
-      <a href="#beneath-the-black-ice"><h2>Beneath the Black Ice &mdash; Budapest, Hungary, 2009</h2></a>
+      <a id="beneath-the-black-ice" href="beneath-the-black-ice.jpg" alt="Beneath the Black Ice &mdash; Budapest, Hungary, 2009" data-caption="Beneath the Black Ice &mdash; Budapest, Hungary, 2009"></a>
     
-      <a class="anchor" name="betty-blue"></a>
-      <img src="betty-blue.jpg" alt="Betty Blue &mdash; Reading, UK, 2008" style="max-width: 1440px">
-      <a href="#betty-blue"><h2>Betty Blue &mdash; Reading, UK, 2008</h2></a>
+      <a id="betty-blue" href="betty-blue.jpg" alt="Betty Blue &mdash; Reading, UK, 2008" data-caption="Betty Blue &mdash; Reading, UK, 2008"></a>
     
-      <a class="anchor" name="brigitte-bar"></a>
-      <img src="brigitte-bar.jpg" alt="Brigitte Bar &mdash; Budapest, Hungary, 2008" style="max-width: 931px">
-      <a href="#brigitte-bar"><h2>Brigitte Bar &mdash; Budapest, Hungary, 2008</h2></a>
+      <a id="brigitte-bar" href="brigitte-bar.jpg" alt="Brigitte Bar &mdash; Budapest, Hungary, 2008" data-caption="Brigitte Bar &mdash; Budapest, Hungary, 2008"></a>
     
-      <a class="anchor" name="bianca-black"></a>
-      <img src="bianca-black.jpg" alt="Bianca Black &mdash; Budapest, Hungary, 2010" style="max-width: 1440px">
-      <a href="#bianca-black"><h2>Bianca Black &mdash; Budapest, Hungary, 2010</h2></a>
+      <a id="bianca-black" href="bianca-black.jpg" alt="Bianca Black &mdash; Budapest, Hungary, 2010" data-caption="Bianca Black &mdash; Budapest, Hungary, 2010"></a>
     
-      <a class="anchor" name="darklight"></a>
-      <img src="darklight.jpg" alt="Darklight &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
-      <a href="#darklight"><h2>Darklight &mdash; Budapest, Hungary, 2008</h2></a>
+      <a id="darklight" href="darklight.jpg" alt="Darklight &mdash; Budapest, Hungary, 2008" data-caption="Darklight &mdash; Budapest, Hungary, 2008"></a>
     
-      <a class="anchor" name="salvadora-scanline"></a>
-      <img src="salvadora-scanline.jpg" alt="Salvadora Scanline &mdash; Brisbane, Australia, 2012" style="max-width: 1440px">
-      <a href="#salvadora-scanline"><h2>Salvadora Scanline &mdash; Brisbane, Australia, 2012</h2></a>
+      <a id="salvadora-scanline" href="salvadora-scanline.jpg" alt="Salvadora Scanline &mdash; Brisbane, Australia, 2012" data-caption="Salvadora Scanline &mdash; Brisbane, Australia, 2012"></a>
     
-      <a class="anchor" name="dorothy-dark"></a>
-      <img src="dorothy-dark.jpg" alt="Dorothy dark &mdash; Rotterdam, Holland, 2008" style="max-width: 1440px">
-      <a href="#dorothy-dark"><h2>Dorothy dark &mdash; Rotterdam, Holland, 2008</h2></a>
+      <a id="dorothy-dark" href="dorothy-dark.jpg" alt="Dorothy dark &mdash; Rotterdam, Holland, 2008" data-caption="Dorothy dark &mdash; Rotterdam, Holland, 2008"></a>
     
-      <a class="anchor" name="easter-bunny"></a>
-      <img src="easter-bunny.jpg" alt="Easter Bunny &mdash; Budapest, Hungary, 2009" style="max-width: 1440px">
-      <a href="#easter-bunny"><h2>Easter Bunny &mdash; Budapest, Hungary, 2009</h2></a>
+      <a id="easter-bunny" href="easter-bunny.jpg" alt="Easter Bunny &mdash; Budapest, Hungary, 2009" data-caption="Easter Bunny &mdash; Budapest, Hungary, 2009"></a>
     
-      <a class="anchor" name="flora-five"></a>
-      <img src="flora-five.jpg" alt="Flora Five &mdash; Sydney, Australia, 2011" style="max-width: 1038px">
-      <a href="#flora-five"><h2>Flora Five &mdash; Sydney, Australia, 2011</h2></a>
+      <a id="flora-five" href="flora-five.jpg" alt="Flora Five &mdash; Sydney, Australia, 2011" data-caption="Flora Five &mdash; Sydney, Australia, 2011"></a>
     
-      <a class="anchor" name="chasity"></a>
-      <img src="chasity.jpg" alt="Brigitte Bar &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
-      <a href="#chasity"><h2>Brigitte Bar &mdash; Budapest, Hungary, 2008</h2></a>
+      <a id="chasity" href="chasity.jpg" alt="Brigitte Bar &mdash; Budapest, Hungary, 2008" data-caption="Brigitte Bar &mdash; Budapest, Hungary, 2008"></a>
     
-      <a class="anchor" name="emerald-gaze"></a>
-      <img src="emerald-gaze.jpg" alt="Emerald Gaze &mdash; Budapest, Hungary, 2009" style="max-width: 1440px">
-      <a href="#emerald-gaze"><h2>Emerald Gaze &mdash; Budapest, Hungary, 2009</h2></a>
+      <a id="emerald-gaze" href="emerald-gaze.jpg" alt="Emerald Gaze &mdash; Budapest, Hungary, 2009" data-caption="Emerald Gaze &mdash; Budapest, Hungary, 2009"></a>
     
-      <a class="anchor" name="funky-60s"></a>
-      <img src="funky-60s.jpg" alt="Funky 60s &mdash; Budapest, Hungary, 2009" style="max-width: 960px">
-      <a href="#funky-60s"><h2>Funky 60s &mdash; Budapest, Hungary, 2009</h2></a>
+      <a id="funky-60s" href="funky-60s.jpg" alt="Funky 60s &mdash; Budapest, Hungary, 2009" data-caption="Funky 60s &mdash; Budapest, Hungary, 2009"></a>
     
-      <a class="anchor" name="sandy-shades"></a>
-      <img src="sandy-shades.jpg" alt="Sandy Shades &mdash; Reading, UK, 2008" style="max-width: 1440px">
-      <a href="#sandy-shades"><h2>Sandy Shades &mdash; Reading, UK, 2008</h2></a>
+      <a id="sandy-shades" href="sandy-shades.jpg" alt="Sandy Shades &mdash; Reading, UK, 2008" data-caption="Sandy Shades &mdash; Reading, UK, 2008"></a>
     
-      <a class="anchor" name="gabrielle-green"></a>
-      <img src="gabrielle-green.jpg" alt="Gabrielle Green &mdash; Budapest, Hungary, 2008" style="max-width: 960px">
-      <a href="#gabrielle-green"><h2>Gabrielle Green &mdash; Budapest, Hungary, 2008</h2></a>
+      <a id="gabrielle-green" href="gabrielle-green.jpg" alt="Gabrielle Green &mdash; Budapest, Hungary, 2008" data-caption="Gabrielle Green &mdash; Budapest, Hungary, 2008"></a>
     
-      <a class="anchor" name="headless"></a>
-      <img src="headless.jpg" alt="Headless &mdash; France, 2007" style="max-width: 931px">
-      <a href="#headless"><h2>Headless &mdash; France, 2007</h2></a>
+      <a id="headless" href="headless.jpg" alt="Headless &mdash; France, 2007" data-caption="Headless &mdash; France, 2007"></a>
     
-      <a class="anchor" name="lady-3jane"></a>
-      <img src="lady-3jane.jpg" alt="Lady 3Jane &mdash; Budapest, Hungary, 2009" style="max-width: 1440px">
-      <a href="#lady-3jane"><h2>Lady 3Jane &mdash; Budapest, Hungary, 2009</h2></a>
+      <a id="lady-3jane" href="lady-3jane.jpg" alt="Lady 3Jane &mdash; Budapest, Hungary, 2009" data-caption="Lady 3Jane &mdash; Budapest, Hungary, 2009"></a>
     
-      <a class="anchor" name="lone-lara"></a>
-      <img src="lone-lara.jpg" alt="Lone Lara &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
-      <a href="#lone-lara"><h2>Lone Lara &mdash; Budapest, Hungary, 2008</h2></a>
+      <a id="lone-lara" href="lone-lara.jpg" alt="Lone Lara &mdash; Budapest, Hungary, 2008" data-caption="Lone Lara &mdash; Budapest, Hungary, 2008"></a>
     
-      <a class="anchor" name="maiko"></a>
-      <img src="maiko.jpg" alt="Maiko &mdash; Rotterdam, Holland, 2008" style="max-width: 1440px">
-      <a href="#maiko"><h2>Maiko &mdash; Rotterdam, Holland, 2008</h2></a>
+      <a id="maiko" href="maiko.jpg" alt="Maiko &mdash; Rotterdam, Holland, 2008" data-caption="Maiko &mdash; Rotterdam, Holland, 2008"></a>
     
-      <a class="anchor" name="colour-claire"></a>
-      <img src="colour-claire.jpg" alt="Colour Claire &mdash; Budapest, Hungary, 2009" style="max-width: 1440px">
-      <a href="#colour-claire"><h2>Colour Claire &mdash; Budapest, Hungary, 2009</h2></a>
+      <a id="colour-claire" href="colour-claire.jpg" alt="Colour Claire &mdash; Budapest, Hungary, 2009" data-caption="Colour Claire &mdash; Budapest, Hungary, 2009"></a>
     
-      <a class="anchor" name="marie-france-tessier"></a>
-      <img src="marie-france-tessier.jpg" alt="Marie-France Tessier &mdash; Budapest, Hungary, 2009" style="max-width: 960px">
-      <a href="#marie-france-tessier"><h2>Marie-France Tessier &mdash; Budapest, Hungary, 2009</h2></a>
+      <a id="marie-france-tessier" href="marie-france-tessier.jpg" alt="Marie-France Tessier &mdash; Budapest, Hungary, 2009" data-caption="Marie-France Tessier &mdash; Budapest, Hungary, 2009"></a>
     
-      <a class="anchor" name="neon-nancy"></a>
-      <img src="neon-nancy.jpg" alt="Neon Nancy &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
-      <a href="#neon-nancy"><h2>Neon Nancy &mdash; Budapest, Hungary, 2008</h2></a>
+      <a id="neon-nancy" href="neon-nancy.jpg" alt="Neon Nancy &mdash; Budapest, Hungary, 2008" data-caption="Neon Nancy &mdash; Budapest, Hungary, 2008"></a>
     
-      <a class="anchor" name="stormbringer"></a>
-      <img src="stormbringer.jpg" alt="Stormbringer &mdash; Budapest, Hungary, 2009" style="max-width: 1440px">
-      <a href="#stormbringer"><h2>Stormbringer &mdash; Budapest, Hungary, 2009</h2></a>
+      <a id="stormbringer" href="stormbringer.jpg" alt="Stormbringer &mdash; Budapest, Hungary, 2009" data-caption="Stormbringer &mdash; Budapest, Hungary, 2009"></a>
     
-      <a class="anchor" name="peggy-pink"></a>
-      <img src="peggy-pink.jpg" alt="Peggy Pink &mdash; Budapest, Hungary, 2010" style="max-width: 1440px">
-      <a href="#peggy-pink"><h2>Peggy Pink &mdash; Budapest, Hungary, 2010</h2></a>
+      <a id="peggy-pink" href="peggy-pink.jpg" alt="Peggy Pink &mdash; Budapest, Hungary, 2010" data-caption="Peggy Pink &mdash; Budapest, Hungary, 2010"></a>
     
-      <a class="anchor" name="rose"></a>
-      <img src="rose.jpg" alt="Rose &mdash; Noosa Heads, Australia, 2011" style="max-width: 1440px">
-      <a href="#rose"><h2>Rose &mdash; Noosa Heads, Australia, 2011</h2></a>
+      <a id="rose" href="rose.jpg" alt="Rose &mdash; Noosa Heads, Australia, 2011" data-caption="Rose &mdash; Noosa Heads, Australia, 2011"></a>
     
-      <a class="anchor" name="shadow-anne"></a>
-      <img src="shadow-anne.jpg" alt="Shadow Anne &mdash; Nagyvárad, Romania, 2008" style="max-width: 960px">
-      <a href="#shadow-anne"><h2>Shadow Anne &mdash; Nagyvárad, Romania, 2008</h2></a>
+      <a id="shadow-anne" href="shadow-anne.jpg" alt="Shadow Anne &mdash; Nagyvárad, Romania, 2008" data-caption="Shadow Anne &mdash; Nagyvárad, Romania, 2008"></a>
     
-      <a class="anchor" name="slumber"></a>
-      <img src="slumber.jpg" alt="Slumber &mdash; Rotterdam, Holland, 2008" style="max-width: 1440px">
-      <a href="#slumber"><h2>Slumber &mdash; Rotterdam, Holland, 2008</h2></a>
+      <a id="slumber" href="slumber.jpg" alt="Slumber &mdash; Rotterdam, Holland, 2008" data-caption="Slumber &mdash; Rotterdam, Holland, 2008"></a>
     </div>
 
     <div id="nav"></div>
 </div>
 
   <script>
-    $(function() {
-      (site.currentPage = site.photo).init();
-    });
+    (site.currentPage = site.photo).init();
   </script>
 </body>
 </html>

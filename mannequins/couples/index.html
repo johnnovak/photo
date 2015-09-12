@@ -18,61 +18,61 @@
   <link rel="stylesheet" type="text/css" href="/css/fotorama.css">
   <link rel="stylesheet" type="text/css" href="/css/photo.css" />
 
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script>
     if (!window.jQuery) {
-      document.write('<script src="/js/lib/jquery-1.11.1.min.js"><\/script>');
+      document.write('<script src="/js/lib/jquery-1.11.3.min.js"><\/script>');
     }
   </script>
   <script src="/js/lib/fotorama.js"></script>
   <script src="/js/lib/imagesloaded.pkgd.min.js"></script>
   <script src="/js/photo.js"></script>
-</head> 
+</head>
 
-<body class="photo">
+<body class="photo nojs">
   <script src="/js/lib/respond.min.js"></script>
-  <script>document.body.className += ' js';</script>
+  <script>
+    var c = document.body.className;
+    c = c.replace(' nojs', '');
+    c += ' js';
+    document.body.className = c;
+  </script>
 
   <div id="header">
     <h1><a class="jn" href="http://www.johnnovak.net/">John Novak</a> <a class="photo" href="/">Photography</a></h1>
 
-    <div class="menu">
-      <ul class="categories">
-        <li><a href="/mannequins/">Mannequins</a></li>
-        <li><a href="/urban/">Urban</a></li>
-        <li><a href="/people/">People</a></li>
-        <li><a href="/bw/">B&W</a></li>
-      </ul>
-      <p class="about"><a href="/about/">About</a></p>
-    </div>
+    <ul class="menu">
+      <li class="category"><a href="/mannequins/">Mannequins</a></li>
+      <li class="category"><a href="/urban/">Urban</a></li>
+      <li class="category"><a href="/people/">People</a></li>
+      <li class="category"><a href="/events/">Events</a></li>
+      <li class="category"><a href="/bw/">Black & White</a></li>
+      <li class="about"><a href="/about/">About</a></li>
+    </ul>
   </div>
 
   <div id="content">
+    <noscript>
+      <div class="no-javascript">
+        Viewing the photo galleries requires JavaScript.
+      </div>
+    </noscript>
+
     <div id="fotorama" data-auto="false">
-      <a class="anchor" name="afternoon-delight"></a>
-      <img src="afternoon-delight.jpg" alt="Afternoon Delight &mdash; Budapest, Hungary, 2008" style="max-width: 1440px">
-      <a href="#afternoon-delight"><h2>Afternoon Delight &mdash; Budapest, Hungary, 2008</h2></a>
+      <a id="afternoon-delight" href="afternoon-delight.jpg" alt="Afternoon Delight &mdash; Budapest, Hungary, 2008" data-caption="Afternoon Delight &mdash; Budapest, Hungary, 2008"></a>
     
-      <a class="anchor" name="cardboard-stalker"></a>
-      <img src="cardboard-stalker.jpg" alt="Cardboard Stalker &mdash; Sydney, Australia, 2011" style="max-width: 1440px">
-      <a href="#cardboard-stalker"><h2>Cardboard Stalker &mdash; Sydney, Australia, 2011</h2></a>
+      <a id="cardboard-stalker" href="cardboard-stalker.jpg" alt="Cardboard Stalker &mdash; Sydney, Australia, 2011" data-caption="Cardboard Stalker &mdash; Sydney, Australia, 2011"></a>
     
-      <a class="anchor" name="ju-and-hu"></a>
-      <img src="ju-and-hu.jpg" alt="Ju & Hu &mdash; Sydney, Australia, 2011" style="max-width: 1440px">
-      <a href="#ju-and-hu"><h2>Ju & Hu &mdash; Sydney, Australia, 2011</h2></a>
+      <a id="ju-and-hu" href="ju-and-hu.jpg" alt="Ju & Hu &mdash; Sydney, Australia, 2011" data-caption="Ju & Hu &mdash; Sydney, Australia, 2011"></a>
     
-      <a class="anchor" name="we"></a>
-      <img src="we.jpg" alt="We &mdash; London, UK, 2008" style="max-width: 1440px">
-      <a href="#we"><h2>We &mdash; London, UK, 2008</h2></a>
+      <a id="we" href="we.jpg" alt="We &mdash; London, UK, 2008" data-caption="We &mdash; London, UK, 2008"></a>
     </div>
 
     <div id="nav"></div>
 </div>
 
   <script>
-    $(function() {
-      (site.currentPage = site.photo).init();
-    });
+    (site.currentPage = site.photo).init();
   </script>
 </body>
 </html>
