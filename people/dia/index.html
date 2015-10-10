@@ -29,7 +29,7 @@
   <script src="/js/photo.js"></script>
 </head>
 
-<body class="albums nojs">
+<body class="photo nojs">
   <script src="/js/lib/respond.min.js"></script>
   <script>
     var c = document.body.className;
@@ -52,38 +52,35 @@
   </div>
 
   <div id="content">
-    <div id="albums">
-      <div class="thumbs">
-      <div class="album odd">
-          <a href="/people/dia/"><img src="/people/dia/_album.jpg" alt="Dia, 2015" /></a>
-          <h2><a href="/people/dia/">Dia, 2015</a></h2>
-        </div>
-      <div class="album even">
-          <a href="/people/adrienn/"><img src="/people/adrienn/_album.jpg" alt="Adrienn, 2015" /></a>
-          <h2><a href="/people/adrienn/">Adrienn, 2015</a></h2>
-        </div>
-      <div class="album odd">
-          <a href="/people/niniel/"><img src="/people/niniel/_album.jpg" alt="Níniel, 2007&ndash;2008" /></a>
-          <h2><a href="/people/niniel/">Níniel, 2007&ndash;2008</a></h2>
-        </div>
-      <div class="album even">
-          <a href="/people/mariann/"><img src="/people/mariann/_album.jpg" alt="Mariann, 2015" /></a>
-          <h2><a href="/people/mariann/">Mariann, 2015</a></h2>
-        </div>
-      <div class="album odd">
-          <a href="/people/vivien/"><img src="/people/vivien/_album.jpg" alt="Vivien, 2007&ndash;2014" /></a>
-          <h2><a href="/people/vivien/">Vivien, 2007&ndash;2014</a></h2>
-        </div>
-      <div class="album even last">
-          <a href="/people/misc/"><img src="/people/misc/_album.jpg" alt="Misc, 2005&ndash;2011" /></a>
-          <h2><a href="/people/misc/">Misc, 2005&ndash;2011</a></h2>
-        </div>
+    <noscript>
+      <div class="no-javascript">
+        Viewing the photo galleries requires JavaScript.
       </div>
+    </noscript>
+
+    <div id="fotorama" data-auto="false">
+      <a id="some-girls-wander-by-mistake" href="some-girls-wander-by-mistake.jpg" alt="Some Girls Wander by Mistake &mdash; Budapest, Hungary, 2015" data-caption="Some Girls Wander by Mistake &mdash; Budapest, Hungary, 2015"></a>
+    
+      <a id="goodbye-blue-sky" href="goodbye-blue-sky.jpg" alt="Goodbye Blue Sky &mdash; Budapest, Hungary, 2015" data-caption="Goodbye Blue Sky &mdash; Budapest, Hungary, 2015"></a>
+    
+      <a id="temple-of-love" href="temple-of-love.jpg" alt="Temple of Love &mdash; Budapest, Hungary, 2015" data-caption="Temple of Love &mdash; Budapest, Hungary, 2015"></a>
+    
+      <a id="at-the-gates" href="at-the-gates.jpg" alt="At the Gates &mdash; Budapest, Hungary, 2015" data-caption="At the Gates &mdash; Budapest, Hungary, 2015"></a>
+    
+      <a id="a-kiss-to-remember" href="a-kiss-to-remember.jpg" alt="A Kiss to Remember &mdash; Budapest, Hungary, 2015" data-caption="A Kiss to Remember &mdash; Budapest, Hungary, 2015"></a>
+    
+      <a id="like-gods-of-the-sun" href="like-gods-of-the-sun.jpg" alt="Like Gods of the Sun &mdash; Budapest, Hungary, 2015" data-caption="Like Gods of the Sun &mdash; Budapest, Hungary, 2015"></a>
+    
+      <a id="one-of-18-angels" href="one-of-18-angels.jpg" alt="One of 18 Angels &mdash; Budapest, Hungary, 2015" data-caption="One of 18 Angels &mdash; Budapest, Hungary, 2015"></a>
+    
+      <a id="she-is-the-dark" href="she-is-the-dark.jpg" alt="She Is the Dark &mdash; Budapest, Hungary, 2015" data-caption="She Is the Dark &mdash; Budapest, Hungary, 2015"></a>
     </div>
+
+    <div id="nav"></div>
 </div>
 
   <script>
-    (site.currentPage = site.albums).init();
+    (site.currentPage = site.photo).init();
   </script>
 </body>
 </html>
