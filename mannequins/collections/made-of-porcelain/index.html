@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    if (window.location == 'http://www.johnnovak.net/photo/') {
+      window.location = 'http://photo.johnnovak.net/';
+    }
+  </script>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, target-densityDpi=160, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="John Novak Photography" />
+  <meta name="author" content="John Novak">
+
+  <title>John Novak Photography</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="/css/fotorama.css">
+  <link rel="stylesheet" type="text/css" href="/css/photo.css" />
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script>
+    if (!window.jQuery) {
+      document.write('<script src="/js/lib/jquery-1.11.3.min.js"><\/script>');
+    }
+  </script>
+  <script src="/js/lib/fotorama.js"></script>
+  <script src="/js/lib/imagesloaded.pkgd.min.js"></script>
+  <script src="/js/photo.js"></script>
+</head>
+
+<body class="photo nojs">
+  <script src="/js/lib/respond.min.js"></script>
+  <script>
+    var c = document.body.className;
+    c = c.replace(' nojs', '');
+    c += ' js';
+    document.body.className = c;
+  </script>
+
+  <div id="header">
+    <h1><a class="jn" href="http://www.johnnovak.net/">John Novak</a> <a class="photo" href="/">Photography</a></h1>
+
+    <ul class="menu">
+      <li class="category"><a href="/mannequins/">Mannequins</a></li>
+      <li class="category"><a href="/urban/">Urban</a></li>
+      <li class="category"><a href="/people/">People</a></li>
+      <li class="category"><a href="/events/">Events</a></li>
+      <li class="category"><a href="/bw/">Black & White</a></li>
+      <li class="about"><a href="/about/">About</a></li>
+    </ul>
+  </div>
+
+  <div id="content">
+    <noscript>
+      <div class="no-javascript">
+        Viewing the photo galleries requires JavaScript.
+      </div>
+    </noscript>
+
+    <div id="fotorama" data-auto="false">
+      <a id="deep-v" href="deep-v.jpg" alt="Deep V &mdash; Singapore, 2012" data-caption="Deep V &mdash; Singapore, 2012"></a>
+    
+      <a id="miss-goldfarb" href="miss-goldfarb.jpg" alt="Miss Goldfarb &mdash; Vienna, Austria, 2010" data-caption="Miss Goldfarb &mdash; Vienna, Austria, 2010"></a>
+    
+      <a id="cara-chrome" href="cara-chrome.jpg" alt="Cara Chrome &mdash; Singapore, 2012" data-caption="Cara Chrome &mdash; Singapore, 2012"></a>
+    
+      <a id="from-head-to-toe" href="from-head-to-toe.jpg" alt="From Head to Toe &mdash; Amsterdam, Holland, 2008" data-caption="From Head to Toe &mdash; Amsterdam, Holland, 2008"></a>
+    
+      <a id="hair" href="hair.jpg" alt="Hair &mdash; Austria, 2005" data-caption="Hair &mdash; Austria, 2005"></a>
+    
+      <a id="priscilla-purple" href="priscilla-purple.jpg" alt="Priscilla Purple &mdash; Brisbane, Australia, 2014" data-caption="Priscilla Purple &mdash; Brisbane, Australia, 2014"></a>
+    
+      <a id="laura-laser" href="laura-laser.jpg" alt="Laura Laser &mdash; Sydney, Australia, 2011" data-caption="Laura Laser &mdash; Sydney, Australia, 2011"></a>
+    
+      <a id="brinah-bride" href="brinah-bride.jpg" alt="Brinah Bride &mdash; Brisbane, Australia, 2014" data-caption="Brinah Bride &mdash; Brisbane, Australia, 2014"></a>
+    </div>
+
+    <div id="nav"></div>
+</div>
+
+  <script>
+    (site.currentPage = site.photo).init();
+  </script>
+</body>
+</html>

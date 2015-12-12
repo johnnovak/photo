@@ -109,7 +109,7 @@ function pageNameFromPathName(pathname) {
     return 'about';
   } else if (path.length == i+0 || path.length == i+1) {
     return 'albums';
-  } else if (path.length == i+2) {
+  } else if (path.length > i+1) {
     return 'photo';
   }
 }
@@ -347,8 +347,8 @@ var photo = function() {
   var fadeOutDuration = 300;
 
   function destroy() {
-    $('#fotorama').fadeTo(fadeOutDuration, 0);
-    $('#nav').fadeTo(fadeOutDuration, 0);
+    $('#fotorama').stop(true).fadeTo(fadeOutDuration, 0);
+    $('#nav').stop(true).fadeTo(fadeOutDuration, 0);
   }
 
   function destroyDuration() {
@@ -410,15 +410,25 @@ var albums = function() {
   var fadeOutAlbumsDelay = 40;
   var fadeOutAlbumDuration = 20;
 
+  function albumElems() {
+    return $('.thumbs').children();
+  }
+
+  function forEachAlbumElem(func) {
+    albumElems().each(func);
+  }
+
   function fadeOutAlbums() {
-    $('.album').each(function(i, album) {
-      $(album).delay(i * fadeOutAlbumsDelay).fadeTo(fadeOutAlbumDuration, 0);
+    forEachAlbumElem(function(i, elem) {
+      $(elem).stop(true)
+             .delay(i * fadeOutAlbumsDelay)
+             .fadeTo(fadeOutAlbumDuration, 0);
     });
   }
 
   function fadeOutAlbumsDuration() {
-    return ($('.album').length - 1)
-           * fadeOutAlbumsDelay + fadeOutAlbumDuration;
+    return (albumElems().length - 1) * fadeOutAlbumsDelay
+                                     + fadeOutAlbumDuration;
   }
 
   function loadCategory(url) {
@@ -439,9 +449,9 @@ var albums = function() {
     var fadeInDuration = 400;
     initialDelay |= 0;
 
-    $('.album').each(function(i, album) {
-      $(album).delay(initialDelay + i * fadeInDelay)
-              .fadeTo(fadeInDuration, 1);
+    forEachAlbumElem(function(i, elem) {
+      $(elem).delay(initialDelay + i * fadeInDelay)
+             .fadeTo(fadeInDuration, 1);
     });
   }
 
@@ -492,9 +502,18 @@ var albums = function() {
 // {{{ ABOUT /////////////////////////////////////////////////////////////////
 
 var about = function() {
+
+  function aboutImg() {
+    return $('#about img');
+  }
+
+  function aboutText() {
+    return $('#about .text');
+  }
+
   function fadeIn() {
-    $('#about img').delay(200).fadeTo(400, 1);
-    $('#about .text').delay(400).fadeTo(600, 1);
+    aboutImg().delay(200).fadeTo(400, 1);
+    aboutText().delay(400).fadeTo(600, 1);
   }
 
   var imgFadeOutDelay = 0;
@@ -503,8 +522,11 @@ var about = function() {
   var textFadeOutDuration = 250;
 
   function fadeOut() {
-    $('#about img').delay(imgFadeOutDelay).fadeTo(imgFadeOutDuration, 0);
-    $('#about .text').delay(textFadeOutDelay).fadeTo(textFadeOutDuration, 0);
+    aboutImg().stop(true)
+              .delay(imgFadeOutDelay).fadeTo(imgFadeOutDuration, 0);
+
+    aboutText().stop(true)
+               .delay(textFadeOutDelay).fadeTo(textFadeOutDuration, 0);
   }
 
   function fadeOutDuration() {

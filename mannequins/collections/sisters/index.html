@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    if (window.location == 'http://www.johnnovak.net/photo/') {
+      window.location = 'http://photo.johnnovak.net/';
+    }
+  </script>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, target-densityDpi=160, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="John Novak Photography" />
+  <meta name="author" content="John Novak">
+
+  <title>John Novak Photography</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="/css/fotorama.css">
+  <link rel="stylesheet" type="text/css" href="/css/photo.css" />
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script>
+    if (!window.jQuery) {
+      document.write('<script src="/js/lib/jquery-1.11.3.min.js"><\/script>');
+    }
+  </script>
+  <script src="/js/lib/fotorama.js"></script>
+  <script src="/js/lib/imagesloaded.pkgd.min.js"></script>
+  <script src="/js/photo.js"></script>
+</head>
+
+<body class="photo nojs">
+  <script src="/js/lib/respond.min.js"></script>
+  <script>
+    var c = document.body.className;
+    c = c.replace(' nojs', '');
+    c += ' js';
+    document.body.className = c;
+  </script>
+
+  <div id="header">
+    <h1><a class="jn" href="http://www.johnnovak.net/">John Novak</a> <a class="photo" href="/">Photography</a></h1>
+
+    <ul class="menu">
+      <li class="category"><a href="/mannequins/">Mannequins</a></li>
+      <li class="category"><a href="/urban/">Urban</a></li>
+      <li class="category"><a href="/people/">People</a></li>
+      <li class="category"><a href="/events/">Events</a></li>
+      <li class="category"><a href="/bw/">Black & White</a></li>
+      <li class="about"><a href="/about/">About</a></li>
+    </ul>
+  </div>
+
+  <div id="content">
+    <noscript>
+      <div class="no-javascript">
+        Viewing the photo galleries requires JavaScript.
+      </div>
+    </noscript>
+
+    <div id="fotorama" data-auto="false">
+      <a id="clouds" href="clouds.jpg" alt="Clouds &mdash; Singapore, 2012" data-caption="Clouds &mdash; Singapore, 2012"></a>
+    
+      <a id="xarax" href="xarax.jpg" alt="Xarax &mdash; Singapore, 2012" data-caption="Xarax &mdash; Singapore, 2012"></a>
+    
+      <a id="albino-twins" href="albino-twins.jpg" alt="Albino Twins &mdash; Reading, UK, 2008" data-caption="Albino Twins &mdash; Reading, UK, 2008"></a>
+    
+      <a id="bad-conscience" href="bad-conscience.jpg" alt="Bad Conscience &mdash; Nagyvárad, Romania, 2008" data-caption="Bad Conscience &mdash; Nagyvárad, Romania, 2008"></a>
+    
+      <a id="blue-velvet" href="blue-velvet.jpg" alt="Blue Velvet &mdash; Brisbane, Australia, 2011" data-caption="Blue Velvet &mdash; Brisbane, Australia, 2011"></a>
+    
+      <a id="double-dolce" href="double-dolce.jpg" alt="Double Dolce &mdash; Mooloolaba, Australia, 2011" data-caption="Double Dolce &mdash; Mooloolaba, Australia, 2011"></a>
+    
+      <a id="mandarine-sisters" href="mandarine-sisters.jpg" alt="Mandarine Sisters &mdash; Singapore, 2012" data-caption="Mandarine Sisters &mdash; Singapore, 2012"></a>
+    
+      <a id="alter-ego" href="alter-ego.jpg" alt="Alter Ego &mdash; Nagyvárad, Romania, 2009" data-caption="Alter Ego &mdash; Nagyvárad, Romania, 2009"></a>
+    
+      <a id="memories-of-sarah" href="memories-of-sarah.jpg" alt="Memories of Sarah &mdash; Sydney, Australia, 2011" data-caption="Memories of Sarah &mdash; Sydney, Australia, 2011"></a>
+    
+      <a id="miss-blurryhand" href="miss-blurryhand.jpg" alt="Miss Blurryhand &mdash; Bern, Switzerland, 2007" data-caption="Miss Blurryhand &mdash; Bern, Switzerland, 2007"></a>
+    
+      <a id="second-skin" href="second-skin.jpg" alt="Second Skin &mdash; Nagyvárad, Romania, 2008" data-caption="Second Skin &mdash; Nagyvárad, Romania, 2008"></a>
+    
+      <a id="they-lurk-at-night" href="they-lurk-at-night.jpg" alt="They Lurk at Night &mdash; Budapest, Hungary, 2009" data-caption="They Lurk at Night &mdash; Budapest, Hungary, 2009"></a>
+    
+      <a id="patty-parallax" href="patty-parallax.jpg" alt="Patty Parallax &mdash; Sydney, Australia, 2011" data-caption="Patty Parallax &mdash; Sydney, Australia, 2011"></a>
+    
+      <a id="alterego" href="alterego.jpg" alt="Alterego &mdash; Nagyvárad, Romania, 2008" data-caption="Alterego &mdash; Nagyvárad, Romania, 2008"></a>
+    
+      <a id="metal-gear" href="metal-gear.jpg" alt="Metal Gear &mdash; Brisbane, Australia, 2012" data-caption="Metal Gear &mdash; Brisbane, Australia, 2012"></a>
+    
+      <a id="pea-chicks" href="pea-chicks.jpg" alt="Pea Chicks &mdash; Rotterdam, Holland, 2008" data-caption="Pea Chicks &mdash; Rotterdam, Holland, 2008"></a>
+    
+      <a id="shadows" href="shadows.jpg" alt="Shadows &mdash; Sydney, Australia, 2011" data-caption="Shadows &mdash; Sydney, Australia, 2011"></a>
+    </div>
+
+    <div id="nav"></div>
+</div>
+
+  <script>
+    (site.currentPage = site.photo).init();
+  </script>
+</body>
+</html>
